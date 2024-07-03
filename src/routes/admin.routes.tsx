@@ -17,7 +17,7 @@ type TSidebarItem ={
 
 }
 
-const adminPaths = [
+export const adminPaths = [
 
     {
         name: 'Dashboard',
@@ -79,49 +79,5 @@ const adminPaths = [
 },[]);
 
 
-// programatical way
 
-export const adminRoutes = adminPaths.reduce((acc : TRoutre[], item) => {
-  
-    if(item.path && item.element){
-        acc.push({
-            path: item.path,
-            element: item.element
-        })
-    }
-
-    if(item.children){
-        item.children.forEach((child) =>{
-            acc.push({
-                path: child.path,
-                element: child.element
-            })
-        })
-    }
-    
-    return acc
-},[]);
-
-// Hard coded way
-
-// export const adminPaths = [
-           
-//     {
-//         path: 'dashboard',
-//         element: <AdminDashboard/>
-//     },
-//     {
-//         path: 'create-student',
-//         element: <CreateStudent/>
-//     },
-//     {  
-//         path:'create-faculty',
-//         element: <CreateFaculty/>
-
-//     },
-//     {
-//         path: 'create-admin',
-//         element: <CreateAdmin/>
-//     },
-// ];
 

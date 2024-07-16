@@ -39,6 +39,7 @@ const Sidebar = () => {
         <Sider
         breakpoint="lg"
         collapsedWidth="0"
+        style={{position: "sticky", top: "0", left:"0", height:"100vh"}}
       >
         <div style={{
           color: "white",

@@ -20,4 +20,4 @@ export type TSidebarItem ={
     label: ReactNode,
     children?: TSidebarItem[],
 
-}
+} | undefined
